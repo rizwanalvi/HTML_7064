@@ -8,29 +8,96 @@
     <style>
         table{
             width: 100%;
-            text-align: center;
-            border: 1px;
-            border-style: solid;
+            /* text-align: center; */
+           border: 1px solid;
+           border-collapse: collapse;
+           caption-side: bottom;
+           text-align: center;
         }
+        td{
+            border: 1px solid red;
+        }
+        th{
+            border: 1px solid;
+        }
+        .col1{
+            text-align: center;
+        }
+        img{
+            height: 4rem;
+            width: 4rem;
+            /* border-radius: 50px; */
+            border-radius: 2rem;
+        }
+      
     </style>
 </head>
 <body>
-    <table border="1"  >
+    <table >
         <tr>
             <th>S.NO</th>
             <th>Name</th>
             <th>Phone Number</th>
         </tr>
         <tr>
-            <td>1</td>
+            <td class="col1">1</td>
             <td>Ahmed Khan</td>
             <td>92333333</td>
         </tr>
         <tr>
-            <td>2</td>
+            <td class="col1">2</td>
+            <td>Noman Ahmed</td>
+            <td>923333333</td>
+        </tr>
+        <tr>
+            <td class="col1">3</td>
             <td>Noman Ahmed</td>
             <td>923333333</td>
         </tr>
     </table>
+<hr/>
+    <table>
+        <caption><h3>GAME COMPETITION </h3></caption>
+        <tr>
+            <th>Team Group</th>
+            <th>Memeber Names</th>
+        </tr>
+        <tr>
+            <td rowspan="3">1</td>
+            <td>Ahmed Khan</td>
+        </tr>
+        <tr>
+           
+            <td>Noman Khan</td>
+        </tr>
+        <tr>
+           
+            <td>Farhan Khan</td>
+        </tr>
+      
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="3">STUDENT LIST</th>
+        </tr>
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Picture</th>
+        </tr>
+        <tr>
+            <td>1005</td>
+            <td>Zeeshan Hussain</td>
+            <td><img src="img/avatar.jpg" alt=""> </td>
+        </tr>
+        <tr>
+            <td>1006</td>
+            <td>Naveed Akhter</td>
+            <td><img src="img/avatar.jpg" alt=""> </td>
+        </tr>
+    </table>
+
+
 </body>
 </html>

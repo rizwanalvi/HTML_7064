@@ -9,29 +9,49 @@
         *{
             padding: 0;
             margin: 0;
+            box-sizing: border-box;
         }
         ul{
             background-color: black;
             display: flex;
             flex-direction: row;
-            padding: 1rem;
+            /* justify-content: flex-end; */
+           
         }
       ul li{
             list-style: none;
            
         }
         ul li a{
+            display: block;
             text-decoration: none;
            color: white;
             padding: 1rem;
         }
         a:hover{
+            display: block;
             background-color: goldenrod;
             transition: 2s linear;
             /* border-bottom-left-radius: 1rem; */
             border-bottom-style: double;
             border-bottom: brown;
            
+        }
+        div{
+           
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        } 
+        img{
+            height: 90px;
+            width: 90px;
+        }
+        #main{
+
+            background-color: red;
+           position: relative;
+           height: 100vh;
         }
     </style>
 </head>
@@ -42,5 +62,13 @@
         <li><a href="#">Service</a></li>
         <li><a href="#">Contact Us </a></li>
     </ul>
+    <div id="main">
+     <P>lOREM*50 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos amet vel corporis eaque. Quos eveniet distinctio veritatis sequi earum modi nam nesciunt, qui asperiores perferendis repudiandae eius ipsam at iste.</P>
+    </div>
+  <div>
+    <a href="#"><img  src="https://cdn.educba.com/academy/wp-content/uploads/2021/05/quiz.png.webp" alt="quiz"></a>
+  </div>
+
+  
 </body>
 </html>

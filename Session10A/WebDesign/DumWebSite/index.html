@@ -7,6 +7,9 @@
     <title>ZomBiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cbfb82c2cc.js" crossorigin="anonymous"></script>
     <style>
@@ -14,6 +17,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
         }
         .container{
             width: 100%;
@@ -57,6 +61,8 @@
         .hero-section{
             height: 100vh;
             width: 100%;
+display: flex;
+flex-direction: column;
 
             background-image:linear-gradient(rgba(115, 112, 216,0.5),rgba(115, 112, 216,0.5),rgba(115, 112, 216,0.5)), url(assets/images/banner/banner1.jpg);
             background-position: center;
@@ -64,6 +70,58 @@
             background-repeat: no-repeat;
             
         }
+      
+      .section-1{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          grid-row-gap: 2rem;
+          width: 100%;
+          height: 40vh;
+          padding: 4rem;
+          /* background-color: red; */
+          text-align: center;
+      }
+        
+      .section-1 h1{
+          font-size: 2rem;
+          font-family: 'Playfair Display', serif;
+          color: #44454f;
+      }
+      .section-1 p{
+          font-size: 1.2rem;
+        margin: 0.5rem;
+        color: #888888;
+        
+      }
+      .section-2{
+          height: 50vh;
+          display: flex;
+          flex-direction: row;
+            grid-column-gap: 3rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+          /* background-color: goldenrod; */
+      }
+      .box{
+          width: 450px;
+         
+          height: 100%;
+      }
+      .box1{
+          /* background-color: royalblue; */
+          text-align: center;
+      }
+      .box2{
+          background-color: green;
+      }
+      .box3{
+          background-color: gray;
+      }
+      .box1:hover{
+        box-shadow: 5px 11px 5px 0px rgba(0,0,0,0.34);
+      }
     </style>
 </head>
 <body>
@@ -88,8 +146,30 @@
             </div>
         <!-- Navigation End  -->
         <!-- Hero Image -->
-        <div class="hero-section"></div>
+        <div class="hero-section">
+         
+        </div>
          <!-- Hero Image End -->
+         <!-- What we do-Start  -->
+        <div class="section-1">
+            <h1>What We Do</h1>
+            <p>Pallamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+
+           <!-- What we do-End  -->
+           <!-- card-section  start -->
+           <div class="section-2">
+               <div class="box box1">
+                   <img src="assets/images/home/consultency.png" alt="">
+                   <div>
+                       <h3>Business Consultancy</h3>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ul.</p>
+                   </div>
+               </div>
+               <div class="box box2"></div>
+               <div class="box box3"></div>
+           </div>
+        <!-- card-section  end -->
     </div>
 </body>
 </html>

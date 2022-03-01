@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        @keyframes colorChanger {
+              0%{ 
+                    background-color: gainsboro;
+                color: black;
+                }
+                
+              100%{
+                  color: red;
+                  background-color: goldenrod;
+                
+                }  
+        }
+        h1{
+            animation-name:colorChanger;
+            animation-duration: 6s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+        @keyframes GradientChange {
+            0%{
+                border-radius: 0px;
+              
+            }
+            100%{
+                border-radius: 100px;
+                opacity: 0;
+               
+            }
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: goldenrod;
+            animation-name: GradientChange;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>PAKISTAN ZINDABAD</h1>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -62,7 +62,7 @@
             0%{
                 left:-50px; 
             }
-            
+
             100%{
                 left:1000px; 
             }
@@ -80,6 +80,19 @@
             height:100px;
             right: 100px;
             top:10px;
+            animation-name: SunShine;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes SunShine {
+            0%{
+                transform: rotate(90deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
         }
     </style>
 </head>

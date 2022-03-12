@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            /* grid-template-columns: repeat(3,1fr); */
+            grid-template-columns: 1fr 2fr 1fr;
+            /* grid-template-columns: 30% 30% 40%; */
+            /* grid-column-gap: 1rem;
+            grid-row-gap: 1rem; */
+            grid-gap: 1rem;
+            /* grid-auto-rows: 50px; */
+            grid-auto-rows: minmax(10px,auto);
+        }
+        .container > div{
+            background-color: #eee;
+        }
+        .container > div:nth-child(odd){
+            background-color: gainsboro;
+        }
+        .w2{
+            grid-column: span 2;
+            background-color: goldenrod !important;
+        }
+        .w3{
+            grid-column: span 3;
+            background-color: goldenrod !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus officia eligendi non saepe est totam, facere ipsum consectetur quae, quasi praesentium, blanditiis ut nisi quod tempore a beatae iure.
+        </div>
+        <div class="w2">
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="w3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vitae vel, iusto iste error dolores repellat. Facilis qui labore, nam fugit quidem iure porro pariatur. Eaque tenetur non cum expedita?
+            Eius aliquam, officia repellendus, aspernatur ullam expedita exercitationem tempora tenetur voluptates, ducimus dolore perferendis saepe illum cum officiis labore. Consequatur minus repudiandae impedit adipisci perspiciatis illum voluptas quam nemo id.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita quo natus architecto, reiciendis numquam in impedit incidunt nobis. Magni similique possimus vitae eum dolorum rerum totam. Nam, autem! Nobis. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita quo natus architecto, reiciendis numquam in impedit incidunt nobis. Magni similique possimus vitae eum dolorum rerum totam. Nam, autem! Nobis. 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit porro vitae dolore esse dolores, ab quos ratione deleniti laborum, necessitatibus voluptatum est consectetur dolorem unde perspiciatis officia. Aliquid, nisi vero.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>   <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita quo natus architecto, reiciendis numquam in impedit incidunt nobis. Magni similique possimus vitae eum dolorum rerum totam. Nam, autem! Nobis. 
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+</body>
+</html>

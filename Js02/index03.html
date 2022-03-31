@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BUTTON CLICK</h1>
+    <input type="button" value="Red" id="btnRed">
+    <input type="button" value="Green" id="btnGreen">
+    <input type="button" value="Blue" id="btnBlue">
+
+    <script>
+        var btnRed = document.getElementById("btnRed");
+       var btnGreen = document.getElementById("btnGreen");
+       
+       btnGreen.addEventListener("click",function(){
+
+        document.body.style.backgroundColor = "green";
+
+       });
+        btnRed.addEventListener("click",function(){
+
+                  document.body.style.backgroundColor = "red";
+        });
+    </script>
+</body>
+</html>

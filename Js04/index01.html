@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="color" id="colCode">
+    <input type="text" id="txtData">
+    <h3 id="h3">No Data</h3>
+    <script>
+var colCode = document.getElementById('colCode');
+var txtData = document.getElementById("txtData");
+var h3 = document.getElementById('h3');
+// colCode.addEventListener("click",function(){
+
+//     document.body.style.backgroundColor = colCode.value;
+
+// });
+colCode.addEventListener("change",function(){
+    document.body.style.backgroundColor = colCode.value;
+
+});
+txtData.addEventListener("keyup",function(){
+// console.log(txtData.value);
+h3.innerText = txtData.value;
+
+});
+
+    </script>
+</body>
+</html>

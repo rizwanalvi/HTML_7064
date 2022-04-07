@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtData" >
+    <button id="btnShow">Show</button>
+    <h1 id="h1">NO Data</h1>
+    <select id="lstCode">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <script>
+     var txtData = document.getElementById("txtData");
+     var btnShow = document.getElementById("btnShow");
+     var h1 = document.getElementById("h1");
+var lstCode = document.getElementById("lstCode");
+     btnShow.addEventListener("click",function(){
+
+       h1.innerText =txtData.value;
+        
+     });
+
+     txtData.addEventListener("keyup",function(){
+        h1.innerText =txtData.value;
+     });
+     lstCode.addEventListener("change",function(){
+        //  alert(lstCode.value);
+         document.body.style.backgroundColor = lstCode.value;
+     });
+
+    </script>
+</body>
+</html>

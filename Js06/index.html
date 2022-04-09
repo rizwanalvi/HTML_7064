@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pos{
+            background-color: green;
+            color: white;
+        }
+        .neg{
+            background-color: red;
+            color: white;
+        }
+        .zer{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="txtNumber">
+    <h1 id="h1">10</h1>
+    
+    <script>
+        
+
+       var h1 = document.getElementById("h1");
+      var txtNumber = document.getElementById("txtNumber");
+      var num =0;
+
+      txtNumber.addEventListener("keyup",function(){
+
+        num = txtNumber.value;
+        if(num >0){
+           h1.innerHTML = "Positive";
+           h1.classList.add("pos");
+           h1.classList.remove("neg");
+           h1.classList.remove("zer");
+        }
+        if(num <0){
+          
+            h1.innerHTML = "Negative";
+            h1.classList.add("neg");
+            h1.classList.remove("pos");
+           h1.classList.remove("zer");
+        }
+        if(num==0){
+            
+           h1.innerHTML = "Zero";
+           h1.classList.add("zer");
+           h1.classList.remove("pos");
+           h1.classList.remove("neg");
+
+        }
+
+
+      });
+    
+            
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            font-size: 4rem
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="img/pic_bulbon.gif" alt="" id="img">
+    <input type="button" value="OFF" id="btnBulb">
+    <input type="button" value="ON" id="btnBulbOn">
+
+
+    <input type="button" id="btnA1" style="height: 150px;width: 150px;"> 
+    <script>
+     var flag =true;
+     var btnA1 = document.getElementById('btnA1');
+     btnA1.addEventListener("click",function(){
+        if(flag){
+            this.value="O"
+            flag=false;
+            this.setAttribute("disabled",true);
+        }
+        else{
+            this.value="X"
+            flag=true;
+            this.setAttribute("disabled",true);
+        }
+      
+     });
+     
+     var btnBulb = document.getElementById('btnBulb');
+        var btnBulbOn = document.getElementById("btnBulbOn");
+        var img = document.getElementById('img');
+
+        btnBulbOn.addEventListener("click",function(){
+
+            img.setAttribute("src","img/pic_bulbon.gif") 
+
+        });
+        btnBulb.addEventListener("click",function(){
+          
+                img.setAttribute("src","img/pic_bulboff.gif") 
+            
+          
+        });
+    </script>
+</body>
+</html>

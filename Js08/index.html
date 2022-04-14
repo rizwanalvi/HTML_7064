@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="img/pic_bulbon.gif" alt="" id="img">
+    <input type="button" value="OFF" id="btnBulb">
+    <script>
+        var btnBulb = document.getElementById('btnBulb');
+        var img = document.getElementById('img');
+        var flag = true;
+        btnBulb.addEventListener("click",function(){
+            if(flag){
+                img.setAttribute("src","img/pic_bulboff.gif") 
+            btnBulb.value = "ON";   
+            flag =false;
+            }
+            else{
+                img.setAttribute("src","img/pic_bulbon.gif") 
+            btnBulb.value = "OFF";   
+            flag =true;
+
+            }
+        });
+    </script>
+</body>
+</html>

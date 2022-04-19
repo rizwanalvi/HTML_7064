@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="lst">
+    <h1 id="h1">Grade : </h1>
+    <script>
+        var score = 0;
+        var h1 = document.getElementById("h1");
+        var lst = document.getElementById('lst');
+
+        lst.addEventListener("keyup",function(){
+        score =  this.value;
+        if(score >=90){
+            h1.innerHTML = "A";
+        }
+       else if(score >=80){
+            h1.innerHTML = "B";
+        }
+       else if(score >=70){
+            h1.innerHTML = "C";
+        }
+       else if(score >=60){
+            h1.innerHTML = "D";
+        }
+      else  if(score >=40){
+            h1.innerHTML = "E";
+        }
+      else  if(score <40){
+            h1.innerHTML = "F : Fail";
+        }
+        });
+        
+      
+    </script>
+</body>
+</html>

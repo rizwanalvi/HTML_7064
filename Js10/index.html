@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="lstColor">
+        <option value="0">---Select---</option>
+        <option value="1">Red</option>
+        <option value="2">Green</option>
+        <option value="3">Blue</option>
+    </select>
+    <script>
+       var lstColor = document.getElementById("lstColor");
+       lstColor.addEventListener("change",function(){
+        var _color = parseInt(lstColor.value);
+        switch(_color){
+            case 1:
+                document.body.style.backgroundColor = "red";
+            break;
+            case 2:
+                document.body.style.backgroundColor = "green";
+            break;
+            case 3:
+                document.body.style.backgroundColor = "blue";
+            break;
+            default:
+            document.body.style.backgroundColor = "white";
+                break;
+        }
+        // if(_color == 1){
+        //     document.body.style.backgroundColor = "red";
+        // }
+        // if(_color == 2){
+        //     document.body.style.backgroundColor = "green";
+        // }
+        // if(_color == 3){
+        //     document.body.style.backgroundColor = "blue";
+        // }
+       });
+       
+    </script>
+</body>
+</html>

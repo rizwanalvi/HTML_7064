@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-4">
+                <form action="" method="post" id="frmCard" >
+                    <div class="form-group">
+                        <label for="" id="lblError">Credit Card Number</label>  
+                    <input type="text" name=""  class="form-control" id="txtNumber">  
+                    
+                    </div>
+                </form>
+
+                <form action="" method="post" id="frmNumber" >
+                    <div class="form-group">
+                        <label for="" id="lblNum">Mobile Number</label>  
+                    <input type="text" name=""  class="form-control" id="txtPho">  
+                    
+                    </div>
+                </form>
+            
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <script>
+            var frmCard = document.getElementById('frmCard');
+            var lblError =document.getElementById('lblError');
+            var txtNumber = document.getElementById("txtNumber");
+            var txtPho = document.getElementById('txtPho');
+            var frmNumber =document.getElementById('frmNumber');
+            var lblNum = document.getElementById('lblNum');
+            txtNumber.addEventListener("keyup",function(){
+           if(txtNumber.value.match(/\d{4}\-\d{4}\-\d{4}\-\d{4}/)){
+            
+                frmCard.classList.remove('bg-danger');
+                lblError.classList.remove('text-white');
+                frmCard.classList.add('bg-success');
+                lblError.classList.add('text-white');
+           }
+           else{
+            frmCard.classList.remove('bg-success');
+                lblError.classList.remove('text-white');
+            frmCard.classList.toggle('bg-danger');
+                lblError.classList.toggle('text-white');
+           }
+
+              
+
+            });
+         
+            txtPho.addEventListener("keyup",function () { 
+            if(txtPho.value.match(/\+[92]{2}\-\d{3}\-\d{7}/)){
+                    frmNumber.classList.remove('bg-danger');
+                    lblNum.classList.remove('text-white');
+                frmNumber.classList.add('bg-success');
+                lblNum.classList.add('text-white');
+                }
+                else{
+                    frmNumber.classList.remove('bg-success');
+                    lblNum.classList.remove('text-white');
+                frmNumber.classList.toggle('bg-danger');
+                lblNum.classList.toggle('text-white');
+                }
+
+             });
+    </script>
+</body>
+</html>

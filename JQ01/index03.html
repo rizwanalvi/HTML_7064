@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>MOBILE SHOP</h1>
+    <div class="alert alert-warning">
+        <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident necessitatibus iste corrupti magnam, adipisci totam laborum consequuntur dolore, incidunt voluptatum quam, dignissimos nobis. Non magni facere odit natus fugiat? Vero.</p>
+        <button class="btn btn-success btn-sm">Read More!</button>
+    </div>
+    <script>
+        $(function(){
+            $('.lead').slideUp();
+            $('.btn').click(function(){
+
+                   $('.lead').slideToggle(3000);
+                   var _val = $('.btn').text();
+                   if(_val=="Read More!"){
+                    $('.btn').text("Show!");
+                   }
+                 else{
+                    $('.btn').text("Read More!");
+                 }
+
+            });
+         
+
+        });
+    </script>
+</body>
+</html>

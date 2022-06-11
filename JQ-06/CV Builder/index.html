@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<style>
+    @media print {
+        *{
+            border: 0px;
+        }
+        #btnPrint,#btnAdd,#btnAddExp,.btn,input[type=file],#txtLevel,#txtInstitute,#txtYear,#txtGrade,.label,#txtDescription,#txtOrganization,#txtDesignation,#txtYearJoin,#txtYearLeaving,.alert{
+            display: none;
+
+        }
+        input{
+            display: none;
+        }
+        input[type=text]{
+            border: none;
+            outline: none;
+            font-weight: bold;
+                }
+        
+        #lstDes,#lstGen,#txtAddress{
+            border: none;
+            outline: none;
+                }
+        }
+</style>
+</head>
+<body>
+    <div class="alert alert-warning sticky-top">
+        <div class="from-control text-right">
+            <button class="btn btn-success btn-sm" id="btnPrint">Print</button>
+        </div>
+    </div>
+   <div class="jumbotron">
+    <div class="h3">PERSONAL INFORMATION</div>
+       <div class="row">
+           
+           <div class="col-md-4">
+               <div class="form-group">
+                   <label for="" class="label">FULL NAME</label>
+                   <input type="text" class="form-control"> 
+               </div>
+               <div class="form-group">
+                <label for="" class="label">JOB TITLE</label>
+                <select name="" id="lstDes" class="form-control">
+                    <option value="0">--Select--</option>
+                    <option value="1">Front-Developer</option>
+                    <option value="2">Database Developer</option>
+                    <option value="3">PHP Developer</option>
+                    <option value="4">React Mobile Developer</option>
+                    <option value="5">React Mobile Developer</option>
+                    <option value="6">Android/Flutter Mobile Develop</option>
+                </select>
+                        
+            </div>
+            <div class="from-group">
+                <label for="" class="label">MOBILE NUMBER</label>
+                <input type="text" id="txtNumber" class="form-control">
+            </div>  
+           </div>
+           <div class="col-md-4">
+            <div class="form-group">
+                <label for="" class="label">GENDER</label>
+                <select name="" id="lstGen" class="form-control">
+                    <option value="0">--Select--</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+               
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="" class="label">ADDRESS</label>
+                <textarea id="txtAddress" class="form-control" rows="5"></textarea>
+              
+            </div>
+           </div>
+           <div class="col-md-4">
+                <img src="img/avatar.jpg" id="previewImg" alt="NO IMAGE" class="img-fluid" style="height: 150px" >
+               
+               <div class="form-group">
+                <label for="exampleFormControlFile1" class="label">Select File</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            </div>
+       </div>
+   </div> 
+   <div class="jumbotron">
+    <div class="h3">EDUCATIONAL INFORMATION</div>
+       <div class="row">
+           <div class="col-md-4"> 
+            <div class="form-group">
+            <label for="" class="label">NAME OF INSTITUTES</label>
+            <input type="text" class="form-control" id="txtInstitute"> 
+        </div>
+    </div>
+           <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" class="label">EDUCATION LEVEL</label>
+                        <select name="" class="form-control" id="txtLevel">
+                            <option value="0">NONE</option>
+                            <option value="METRIC">METRIC</option>
+                            <option value="INTERMEDIATE">INTERMEDIATE</option>
+                            <option value="GRADUATION">GRADUATION</option>
+                            <option value="MASTER">MASTER</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+                        
+                        </div>
+                </div>
+                <div class="col-md-6">  <div class="form-group">
+            
+            
+                    <label for="" class="label">YEAR OF PASSING</label>
+                    <input type="number" class="form-control" id="txtYear"> 
+                </div></div>
+            </div>
+          
+           </div>
+           <div class="col-md-4">
+            <div class="form-group">
+                <label for="" class="label">GRADES/DIVISION</label>
+                <input type="text" class="form-control" id="txtGrade"> 
+            </div>
+            <div class="form-group">
+                <button id="btnAdd" class="btn btn-success btn-sm" >Add</button>
+            </div>
+           
+           </div>
+       </div>
+
+       
+       <table class="table table-striped">
+        <tbody id="tbodyEducation">
+        <tr>
+                <thead class="thead-dark">
+               
+                <th>NAME OF INSTITUTES</th>
+                <th>EDUCATION LEVEL</th>
+                <th>YEAR OF PASSING</th>
+                <th>GRADES/DIVISION</th>
+                <th></th>
+                </thead>
+            </tr>
+          
+               
+             
+                
+            </tbody>
+       </table>
+
+
+   </div>
+   <div class="jumbotron">
+    <div class="h3">JOB EXPERIENCE</div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="from-group">
+                <label for="" class="label">NAME OF ORGANIZATION</label>
+                <input type="text" class="form-control" id="txtOrganization">
+            </div>
+            <div class="from-group">
+                <label for="" class="label">YEAR OF JOINING</label>
+                <input type="number"  min="1900" class="form-control" id="txtYearJoin">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="from-group">
+                <label for="" class="label">DESIGNATION</label>
+                <input type="text" class="form-control" id="txtDesignation">
+            </div>
+            <div class="from-group">
+                <label for="" class="label">YEAR OF LEAVING</label>
+                <input type="number"  min="1900" class="form-control" id="txtYearLeaving">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="" class="label">JOB DESCRIPTION</label>
+                <textarea class="form-control" rows="5" id="txtDescription"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-sm" id="btnAddExp">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <tbody id="tbodyExperience">
+        <tr>
+                <thead class="thead-dark">
+               
+                <th>ORAGANIZATION</th>
+                <th>DESIGNATION</th>
+                <th>YEAR OF JOINING</th>
+                <th>YEAR OF LEAVING</th>
+                <th>JOB DESCRIPTION</th>
+                <th>    </th>
+ 
+                </thead>
+            </tr>
+          
+               
+             
+                
+            </tbody>
+       </table>
+   </div>
+  
+   <script>
+       $(function(){
+         
+        $('input').change(function(){
+                if($('input').val()!= ""){
+                    $(this).addClass('is-valid');
+                }
+                else{
+                    $(this).removeClass('is-valid');
+                   
+                }
+           });
+           $('textarea').change(function(){
+                $(this).addClass('is-valid');
+            });
+
+           $('select').change(function(){
+
+            $(this).addClass('is-valid');
+           });
+           $('#txtNumber').keypress(function(event){
+
+           
+            return event.charCode >= 48 && event.charCode <= 57;
+           });
+           $('#txtNumber').change(function(){
+            $(this).addClass('is-valid');
+        
+           });
+           
+
+           $('#btnAdd').click(function(){
+                var _txtInstitute = $('#txtInstitute').val();
+                var _txtYear = $('#txtYear').val();
+                var _txtGrade = $('#txtGrade').val();
+                var _txtLevel = $('#txtLevel').val();
+                var _btnRemove = "<button class='btn btn-danger btn-sm'>Remove</button>";
+                $('#tbodyEducation').append(`<tr><td>${_txtInstitute}</td><td>${_txtLevel}</td><td>${_txtYear}</td><td>${_txtGrade}</td><td>${_btnRemove}</td></tr>`);
+
+                
+
+                    $('tr').find('button').click(function(){
+
+                            $(this).parent().parent().remove();
+                    });
+               
+           });
+
+
+           $('#btnAddExp').click(function(){
+                var _txtDescription = $('#txtDescription').val();
+                var _txtYearJoin = $('#txtYearJoin').val();
+                var _txtYearLeaving= $('#txtYearLeaving').val();
+                var _txtDesignation = $('#txtDesignation').val();
+                var _txtOrganization = $('#txtOrganization').val();
+                var _btnRemove = "<button class='btn btn-danger btn-sm'>Remove</button>";
+                $('#tbodyExperience').append(`<tr><td>${_txtOrganization}</td><td>${_txtOrganization}</td><td>${_txtYearJoin}</td><td>${_txtYearLeaving}</td><td>${_txtDescription}</td><td>${_btnRemove}</td></tr>`);
+
+                
+
+                    $('tr').find('button').click(function(){
+
+                            $(this).parent().parent().remove();
+                    });
+               
+           });
+
+         $('#btnPrint').click(function(){
+
+            window.print();
+            return false;
+         });
+         $('input[type=file]').change(function(){
+            var file = $(this).get(0).files[0];
+         if(file){
+            var reader = new FileReader();
+             reader.onload = function(){
+                $("#previewImg").attr("src", reader.result);
+            }
+             reader.readAsDataURL(file);
+        }
+         });
+        
+       });
+   </script>
+</body>
+</html>
